@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Développement Web - TP14</title>
+    <!-- Lien vers les icônes FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Lien EXACT vers votre fichier CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <div class="main-nav">
+        <div class="container flex">
+            <h2 style="margin-right: 20px; color: #333;">Web Academy</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Tutoriels</a></li>
+                    <li><button id="theme-toggle" class="btn"><i class="fas fa-moon"></i> Mode Sombre</button></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Bannière principale -->
+    <header class="showcase">
+        <div class="container flex">
+            <h1>Maîtrisez le Développement Web</h1>
+            <p>Découvrez comment structurer, styliser et rendre interactives vos pages web en utilisant le trio incontournable : HTML5, CSS3 et JavaScript.</p>
+            <a href="#" id="start-btn" class="btn">Commencer l'apprentissage <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </header>
+
+    <!-- Cartes avec icônes FontAwesome -->
+    <section class="home-cards">
+        <div class="container grid">
+            <div>
+                <i class="fab fa-html5 fa-5x" style="color: #e34c26;"></i>
+                <h3>HTML5</h3>
+                <p>Le squelette de vos pages web. Apprenez à structurer votre contenu avec une sémantique claire et accessible.</p>
+                <a href="#">LIRE PLUS <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div>
+                <i class="fab fa-css3-alt fa-5x" style="color: #264de4;"></i>
+                <h3>CSS3</h3>
+                <p>Habillez vos pages web. Gérez les couleurs, les polices et maîtrisez les mises en page avec Flexbox et CSS Grid.</p>
+                <a href="#">LIRE PLUS <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div>
+                <i class="fab fa-js-square fa-5x" style="color: #f7df1e;"></i>
+                <h3>JavaScript</h3>
+                <p>Rendez votre site vivant. Ajoutez de l'interactivité, des animations et manipulez le DOM en temps réel.</p>
+                <a href="#">LIRE PLUS <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div>
+                <i class="fas fa-mobile-alt fa-5x" style="color: #333;" id="icon-responsive"></i>
+                <h3>Responsive</h3>
+                <p>Adaptez votre design à tous les écrans, du smartphone à l'ordinateur de bureau, pour une expérience utilisateur parfaite.</p>
+                <a href="#">LIRE PLUS <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ruban -->
+    <section class="ruban">
+        <div class="container">
+            <div class="content">
+                <h2>L'importance du Front-End</h2>
+                <p>Le trio HTML, CSS et JS forme la base de toutes les interfaces web modernes. Ensemble, ils permettent de créer des expériences utilisateurs riches, performantes et dynamiques sur tous les navigateurs.</p>
+                <a href="#" class="btn dark">Voir les projets <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Liens -->
+    <section class="links">
+        <div class="links-inner container flex">
+            <ul>
+                <h3>Bases du HTML</h3>
+                <li>Balises & Attributs</li>
+                <li>Formulaires</li>
+                <li>Sémantique Web</li>
+            </ul>
+            <ul>
+                <h3>Design CSS</h3>
+                <li>Flexbox & Grid</li>
+                <li>Animations CSS</li>
+                <li>Variables CSS</li>
+            </ul>
+            <ul>
+                <h3>Logique JavaScript</h3>
+                <li>Manipulation du DOM</li>
+                <li>Événements (Events)</li>
+                <li>Appels API (Fetch)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="sub-footer">
+        <div class="container flex">
+            <div class="footer-left">
+                <i class="fas fa-globe"></i>
+                <p>Français (France)</p>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li>Contactez-nous</li>
+                    <li>&copy; 2026 USTHB - TP14 Programmation Web</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript pour le Mode Sombre et l'Alerte -->
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        themeToggleBtn.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            if(document.body.classList.contains('dark-mode')) {
+                themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i> Mode Clair';
+                themeToggleBtn.style.background = '#f4a261'; 
+            } else {
+                themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i> Mode Sombre';
+                themeToggleBtn.style.background = '#333'; 
+            }
+        });
+
+        const startBtn = document.getElementById('start-btn');
+        startBtn.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            alert("Félicitations ! Vous venez de déclencher du JavaScript.\n\nPrêt à coder en HTML, CSS et JS ?");
+        });
+    </script>
+</body>
+</html>
